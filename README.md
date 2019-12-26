@@ -1,11 +1,10 @@
-[![Docker Automated build](https://img.shields.io/docker/cloud/build/faph/action-jekyll)](https://cloud.docker.com/repository/docker/faph/action-jekyll/)
+<!-- [![Docker Automated build](https://img.shields.io/docker/cloud/build/faph/action-jekyll)](https://cloud.docker.com/repository/docker/faph/action-jekyll/) -->
 
 # A GitHub Action for just building Jekyll web sites
 
 We're only building the site here. If you want to do some other stuff with those
-site files like deploying them, or running some build scripts on them—you'll 
+site files like deploying them, or running some build scripts on them — you'll 
 have to connect up some other actions to your workflow.
-
 
 ## Inputs
 
@@ -15,7 +14,6 @@ have to connect up some other actions to your workflow.
   destination directory to prevent GitHub building the website with Jekyll. 
   Default: `true`.
 
-
 ## Examples
 
 ```yaml
@@ -24,22 +22,22 @@ jobs:
     name: Build website
     runs-on: ubuntu-latest
     steps:
+
     - name: Checkout repository
       uses: actions/checkout@v1
       with:
         ref: master
+    
     - name: Run Jekyll
-      uses: docker://faph/action-jekyll:1.5
+      uses: theikeofficial/action-jekyll@master
 ```
 
-Clones the repo and builds the site—that's it.
-
+Clones the repo and builds the site — that's it.
 
 ## Caveats
 
 * Needs a Gemfile in the working directory.
 * Be sure that any custom gems needed are included in your Gemfile.
-
 
 ## Terms & Conditions
 
