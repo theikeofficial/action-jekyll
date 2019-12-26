@@ -6,6 +6,7 @@ echo "Build parameters:"
 echo "INPUT_DESTINATION_DIR: ${INPUT_DESTINATION_DIR:=_site}"
 echo "INPUT_ADD_NOJEKYLL_TAG: ${ADD_NOJEKYLL_TAG:=true}"
 
+gem install bundler:2.0.2
 bundle install
 bundle exec jekyll build --verbose --destination "${INPUT_DESTINATION_DIR}"
 
